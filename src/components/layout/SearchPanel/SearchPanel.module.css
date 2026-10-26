@@ -1,0 +1,45 @@
+.panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border-default);
+  box-shadow: var(--shadow-md);
+  display: none;
+  z-index: var(--z-dropdown);
+}
+
+.panel[data-open] {
+  display: block;
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: var(--space-4) var(--container-padding);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.field {
+  flex: 1;
+  min-width: 0;
+}
+
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: background-color var(--transition-fast) color var(--transition-fast);
+}
+
+.closeButton:hover {
+  background: var(--bg-muted);
+  color: var(--text-primary);
+}

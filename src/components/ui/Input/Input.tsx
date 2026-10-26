@@ -10,7 +10,7 @@ export type InputProps = {
   fullWidth?: boolean;
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
-} & InputHTMLAttributes<HTMLInputElement>;
+} & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>;
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ size = 'md', invalid = false, fullWidth = false, leftIcon, rightIcon, className, id, type = 'text', ...rest }, ref) {
   const generatedId = useId();
